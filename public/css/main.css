@@ -119,7 +119,7 @@ h2{
     margin: 1px auto;
 }
 .aside_imagen{
-    filter: blur(2rem);
+    /* filter: blur(2rem); */
     width: 100%;
     /* margin: 10px auto; */
     margin-top: 0.5em;
