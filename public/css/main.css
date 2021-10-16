@@ -71,7 +71,7 @@ h2{
 .nav-barra a:hover{
     /* align-items: stretch; */
     color:   #ffffff;
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: #022d68;
 }
 
@@ -166,13 +166,14 @@ h2{
 .project_elemento{
     display: flex;
     flex-direction: row;
-    column-gap: 15px;
+    column-gap: 10x;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .projects .project_elemento div{
     /* background-image: url(/public/imagenes/contruccion.png); */
     /* background-color: aqua; */
-    width: 100%;
+    width: auto;
     height: 10em;
 }
 
@@ -193,11 +194,26 @@ h2{
     font-size:  2em;
     margin-right: .4em;
 }
+.nav-barra.mobil{
+    display: none;
+    visibility: hidden;
+}
 /* MEDIA Vista Mobil */
-@media only screen and (max-width: 420px){
-    /* body{
-        background-color: aqua;
+@media only screen and (min-width: 420px){
+    /* .nav-barra .mobil{
+        visibility: hidden;
     } */
+}
+@media only screen and (max-width: 420px){
+    nav.nav-barra:nth-child(1){ 
+        display: none;
+        visibility: hidden;
+    }
+    .nav-barra.mobil{
+        display: flex;
+        visibility: visible;
+        grid-row: 1/2;
+    }
     .container{
         /* font-family: 'Oxygen', sans-serif; */
         /* display: grid;
@@ -210,11 +226,15 @@ h2{
     }
     .container .main{
         grid-column: 1/6;
+        grid-row: 3/5;
     }
     .container .aside{
         grid-column: 1/6;
         grid-row: 2/3;
         
+    }
+    .project_elemento{
+        flex-direction: column;
     }
     .project_elemento div img{
         /* display: ; */
