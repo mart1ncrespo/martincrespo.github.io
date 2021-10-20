@@ -27,13 +27,25 @@
         </nav>
         <nav class="nav-barra mobil"> 
             <a href="#" class="icono_martin"><i class="fas fa-angle-right"></i> martin.c</a>
-            <ul class="nav-barra_informacion">
-                <li><a href="#">Inicio</a></li>
+            <ul class="nav-barra_mobil_informacion">
+                <div class="icono_menu">
+                    <input class="estado_menu" type="checkbox">
+                        <i id="menu_abierto" class="fas fa-times"></i>
+                        <i id="menu_cerrado" class="fas fa-bars"></i>
+                        <div class="enlaces_barra_mobil">
+                            <a href="#">Inicio</a>
+                            <a href="#sobre_mi">Sobre mi</a>
+                            <a href="#formacion">Formacion</a>
+                            <a href="#herramientas">Herramientas</a>
+                            <a href="#proyectos">Proyectos</a>
+                            <a href="#">Contacto</a>
+                        </div>
+                </div>
             </ul>
         </nav>
 
         <main class="main">
-            <div class="main_sobre_mi">
+            <div class="main_sobre_mi" id="sobre_mi">
                 <h2>Sobre mi</h2>
                 <p>Comprometido con el trabajo, responsable y organizado, capaz de desempeñar eficazmente con   base en una previa capacitación diversas actividades laborales, gran capacidad de aprendizaje. 
                     Siempre aportando ideas y soluciones al campo con liderazgo, experimentado a trabajar bajo presión en diversas áreas.
@@ -42,7 +54,7 @@
             
             <hr class="separador">
 
-            <div class="main_formacion">
+            <div class="main_formacion" id="formacion">
             <h2>Formacion academica</h2>
             <p>Periodo: 2015 - 2020</p>
             <p>Instituto Tecnológico Superior De Tierra Blanca (ITSTB).</p>
@@ -57,7 +69,7 @@
             </div>
 
             <hr class="separador">
-            <div class="main_habilidades">
+            <div class="main_habilidades" id="herramientas">
                 <h2>Herramientas</h2>
                 <div class="main_habilidades_especificas">
                     <div class="herramienta_dev">
@@ -143,7 +155,7 @@
             </div>
         </aside>
 
-        <div class="projects">
+        <div class="projects" id="proyectos">
             <div class="project_elemento">
                 <div class="proj">
                     <img src="imagenes/contruccion.png" alt="No encontrado">

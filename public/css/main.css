@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body{
     background-color: #e6e6e6;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239f9ca4' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -30,6 +33,11 @@ h2{
     grid-column: 1/6;
     /* color:  #d9ebff; */
     
+}
+.nav-barra_mobil_informacion i{
+    font-size: 2em;
+    padding-right: 15px;
+    color: #fff8dc;
 }
 
 .nav-barra ul{
@@ -74,6 +82,72 @@ h2{
     /* font-weight: bold; */
     background-color: #022d68;
 }
+/* MENU NAV */
+#menu_abierto{
+    display: none;
+    visibility: hidden;
+}
+.icono_menu input{
+    z-index: 200;
+    padding-left: 10%;
+    size: 2em;
+}
+.icono_menu i{
+    z-index: 150;
+    position: relative;
+}
+.estado_menu:checked ~ #menu_abierto,
+.estado_menu:checked ~ .enlaces_barra_mobil{
+    display: inline-block;
+    visibility: visible;
+    /* z-index: 50; */
+    /* color: aqua; */
+}
+/* .icono_menu:hover > #menu_abierto{
+    display: inline-block;
+    visibility: visible;
+    z-index: 50;
+    
+} */
+.estado_menu:checked ~ #menu_cerrado{
+    display: none;
+    visibility: hidden;
+    /* color: aqua; */
+}
+/* #menu_abierto:active{
+    display: none;
+    visibility: hidden;
+    
+} */
+.estado_menu{
+    height: 2em;
+    width: 3em;
+    /* display: inline; */
+    position: relative;
+    opacity: 0;
+    /* size: 2em; */
+    left: 44%;
+    z-index: 100;
+}
+.enlaces_barra_mobil{
+    display: none;
+    visibility: hidden;
+    background-color: #004bb4;
+    /* z-index: 30; */
+    position: absolute;
+    top: 58px;
+    right: 10px;
+    width: 100vw;
+}
+.enlaces_barra_mobil a{
+    text-align: center;
+
+}
+
+
+
+
+/*  */
 
 .container .main{
     border: 1px solid #3D56B2;
@@ -205,6 +279,10 @@ h2{
     } */
 }
 @media only screen and (max-width: 420px){
+    .container{
+        margin: 0;
+        row-gap:unset;
+    }
     nav.nav-barra:nth-child(1){ 
         display: none;
         visibility: hidden;
