@@ -170,6 +170,7 @@ h2{
 .container .projects{
     /* border:1px solid #3D56B2; */
     grid-column: 1/6;
+    height: 11em;
 }
 
 .container .footer{
@@ -245,16 +246,22 @@ h2{
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.projects .project_elemento div{
-    /* background-image: url(/public/imagenes/contruccion.png); */
-    /* background-color: aqua; */
+.proj{
+    /* height: 9em; */
     width: auto;
     height: 10em;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+/* .projects .project_elemento div:first-child{
+    /* background-image: url(/public/imagenes/contruccion.png); */
+    /* background-color: aqua; */
+    /*width: auto;
+    height: 10em;
+} */
 
 .project_elemento img{
     /* max-width: 100%; */
-    height: 100%;
+    height: 85%;
     width: 195px;
     /* object-fit: cover; */
     margin: 1px 0;
@@ -283,6 +290,7 @@ h2{
     .container{
         margin: 0;
         row-gap:unset;
+        /* height: auto; */
     }
     nav.nav-barra:nth-child(1){ 
         display: none;
@@ -298,10 +306,11 @@ h2{
         /* display: grid;
         grid-template-columns: repeat(5, 1fr); */
         width: 100%;
+        height: 50em;
         /* margin: 1em auto; */
         /* column-gap: 5px;
         row-gap: 5px; */
-        grid-template-rows: repeat(5, 1rf);
+        grid-template-rows: repeat(3, 1rf) auto 1fr;
     }
     .container .main{
         grid-column: 1/6;
@@ -311,6 +320,10 @@ h2{
         grid-column: 1/6;
         grid-row: 2/3;
         
+    }
+    .projects{
+        grid-row: 5/6 !important;
+        height: max-content !important;
     }
     .project_elemento{
         flex-direction: column;
